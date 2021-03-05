@@ -1,15 +1,11 @@
 node {
 
   stage('Git-CheckOut') {
-   git 'https://github.com/devops311/user-project-application.git'
+   git 'https://github.com/anantmishra2529/final-devops201.git'
   }
-    stage('Trufflehog Inspection')
-    {
-    sh 'docker run gesellix/trufflehog --json https://github.com/devops311/user-project-application.git > trufflehogReport'
-    sh 'cat trufflehogReport'
-    }
+
     
- def project_path="application-code/code/userproject"
+ def project_path="pom.xml"
  
  dir(project_path) {
     
